@@ -5,7 +5,6 @@ const app = express();
 // Create a CORS Anywhere proxy
 const proxy = corsAnywhere.createServer({
     originWhitelist: [], // Allow all origins
-    requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2'],
     setHeaders: {
         'Access-Control-Allow-Origin': '*' // Allow all origins
